@@ -148,12 +148,32 @@ The framework uses a centralized configuration system:
 
 ## Documentation
 
-Comprehensive documentation is available:
+Documentation is available with:
 
 - **API Documentation**: Auto-generated from docstrings using MkDocs
-- **Methodology**: Detailed explanations of each modeling approach
-- **Examples**: Jupyter notebooks with complete workflows
-- **Configuration**: Setup and customization guides
+- **Methodology**: Explanations of each modeling approach
+
+### Local Documentation Setup
+
+After installing dependencies with `uv sync`, serve the docs locally:
+
+```bash
+# change the directory to docs
+cd docs
+
+# Serve with live reload (recommended during development)
+mkdocs serve
+```
+
+Then open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
+
+To build a static site:
+
+```bash
+mkdocs build
+```
+
+The output will be in the `site/` directory.
 
 ## Research Applications
 
