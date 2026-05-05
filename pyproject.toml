@@ -1,0 +1,56 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "evcopulas"
+version = "0.0.1"
+description = "Comprehensive framework for modeling EV charging patterns using copula methods and neural networks"
+authors = [
+  { name = "Martin Vyboh" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "copulae>=0.8.0",
+    "copulas>=0.14.1",
+    "ipykernel>=7.2.0",
+    "loguru",
+    "mkdocs",
+    "mkdocs-print-site-plugin>=2.8",
+    "mkdocs-to-pdf>=0.11.2",
+    "mkdocstrings>=1.0.4",
+    "mkdocstrings-python>=2.0.3",
+    "pip",
+    "polars>=1.38.1",
+    "python-dotenv",
+    "pyvinecopulib>=0.7.5",
+    "ruff",
+    "scienceplots>=2.2.1",
+    "scipy>=1.17.1",
+    "seaborn>=0.13.2",
+    "skimpy>=0.0.20",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
+    "tqdm",
+    "typer",
+]
+requires-python = "~=3.12.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["evcopulas"]
+include = ["pyproject.toml", "evcopulas/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["evcopulas"]
+force-sort-within-sections = true
+

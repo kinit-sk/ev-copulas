@@ -1,0 +1,79 @@
+site_name: EV Copula Modeling Framework
+site_description: Comprehensive framework for modeling EV charging patterns using copula methods and neural networks
+site_author: Martin Vyboh
+site_url: https://your-domain.com
+
+repo_name: ev-copulas
+repo_url: https://github.com/kinit-sk/ev-copulas
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: false
+            show_root_heading: true
+            show_root_toc_entry: false
+            merge_init_into_class: true
+            show_signature_annotations: true
+  - to-pdf:
+      output_path: /home/mvyboh/codine-ev-poc/ev-copulas/docs.pdf
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - API Reference:
+    - Core Modules:
+      - Configuration: api/config.md
+      - Dataset Processing: api/dataset.md
+      - Evaluation: api/evaluate.md
+      - Metrics: api/metrics.md
+      - Utilities: api/utils.md
+      - Plotting: api/plots.md
+    - Modeling Approaches:
+      - Classical Copulas: api/copulas.md
+      - CODINE Neural Copulas: api/codine.md
+      - GMM Networks: api/gmmnetwork.md
+  - Methodology:
+    - Classical Copulas: methodology/classical-copulas.md
+    - Neural Copulas (CODINE): methodology/codine.md
+    - GMM Networks: methodology/gmm-networks.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
