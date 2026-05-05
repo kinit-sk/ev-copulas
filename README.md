@@ -42,6 +42,13 @@ cd ev-copulas
 uv sync
 ```
 
+### Data Preparation
+
+Before training, download the raw datasets:
+
+1. Download the dataset from the links in [Supported Datasets](#supported-datasets) above
+2. Place the CSV file in `data/raw/` (e.g. `data/raw/trondheim.csv`)
+
 ### Training Models
 
 ```bash

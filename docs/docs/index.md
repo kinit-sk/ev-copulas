@@ -27,8 +27,8 @@ This repository provides implementations of several copula-based methods for EV 
 
 ## Supported Datasets
 
-- **Trondheim**: Norwegian residential charging EV charging data with private user sessions
-- **Dundee**: Scottish public charger EV charging data focusing on rapid charging
+- **Trondheim**: Norwegian residential charging EV charging data with private user sessions ([download](https://drive.google.com/file/d/1TUQsq5ttHmmf2gmgsv-VUEXfpacJKTJz/view?usp=sharing))
+- **Dundee**: Scottish public charger EV charging data focusing on rapid charging ([download](https://drive.google.com/file/d/1sPwlcYr3Hr6IIXBtZC-1wCcdNY38zjR3/view?usp=sharing))
 - **Proprietary**: Custom household EV charging dataset from Slovakia (not available for download)
 
 ## Installation
@@ -45,16 +45,18 @@ uv sync
 ## Quick Start
 
 ```bash
-# Train classical copulas
+# 1. Download the dataset (see Supported Datasets above for links) and place it in data/raw/
+
+# 2. Train classical copulas
 python -m evcopulas.copulas.train --dataset trondheim --copulas gaussian
 
-# Train CODINE neural copula  
+# 3. Train CODINE neural copula  
 python -m evcopulas.codine.train --dataset trondheim --divergence GAN
 
-# Train GMM networks
+# 4. Train GMM networks
 python -m evcopulas.gmmnetwork.train --dataset trondheim --use-early-stopping
 
-# Evaluate all models
+# 5. Evaluate all models
 python -m evcopulas.evaluate --datasets trondheim --models gaussian codine gmmnetwork
 ```
 

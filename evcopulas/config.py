@@ -33,6 +33,10 @@ MODELS_DIR = PROJ_ROOT / "models"
 REPORTS_DIR = PROJ_ROOT / "reports"
 FIGURES_DIR = REPORTS_DIR / "figures"
 
+# Ensure all directories exist
+for _dir in [RAW_DATA_DIR, INTERIM_DATA_DIR, PROCESSED_DATA_DIR, EXTERNAL_DATA_DIR, MODELS_DIR, FIGURES_DIR]:
+    _dir.mkdir(parents=True, exist_ok=True)
+
 # Logging configuration with tqdm integration
 # If tqdm is installed, configure loguru with tqdm.write
 # This prevents progress bars from being disrupted by log messages

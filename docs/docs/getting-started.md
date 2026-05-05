@@ -69,6 +69,21 @@ Each dataset should contain EV charging session data with columns for:
 
 If using your own proprietary dataset, it's necessary to change the underlying preprocessing function in the `dataset.py`.
 
+## Data Preprocessing
+
+Before training any model, download the dataset:
+
+1. Download the dataset from the links in [Supported Datasets](#supported-datasets) above
+2. Place the CSV file in `data/raw/` (e.g. `data/raw/trondheim.csv`)
+
+```bash
+python -m evcopulas.dataset --dataset trondheim
+# or
+python -m evcopulas.dataset --dataset dundee
+```
+
+This produces a processed file in `data/processed/` with three standardized columns: `start_hour_shifted`, `duration`, and `energy`.
+
 ## First Steps
 
 ### 1. Train a Classical Copula
