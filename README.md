@@ -204,6 +204,9 @@ If you use this framework, or any findings from the paper in your research, plea
 
 - **CODINE**: Letizia, N. A., Novello, N., & Tonello, A. M. (2025). Copula Density Neural Estimation. IEEE Transactions on Neural Networks and Learning Systems.
 - **GMM Network**: Li, Z., Bian, Z., Chen, Z., Ozbay, K., & Zhong, M. (2024). Synthesis of electric vehicle charging data: A real-world data-driven approach. Communications in Transportation Research.
+- **Dundee dataset**: Dundee City Council. (n.d.). Public EV Charge Point Usage 2023-2024 [Dataset]. Retrieved February 10, 2026, from https://data.dundeecity.gov.uk/datasets/80df5f177b8c4a94b2bc692835801e8e/about
+- **Trondheim dataset**: Sørensen, Å. L., Lindberg, K. B., Sartori, I., & Andresen, I. (2021). Residential electric vehicle charging datasets from apartment buildings. Data in Brief, 36, 107105. https://doi.org/10.1016/j.dib.2021.107105
+
 
 ## Contact
 [martin.vyboh@kinit.sk](mailto:martin.vyboh@kinit.sk)
