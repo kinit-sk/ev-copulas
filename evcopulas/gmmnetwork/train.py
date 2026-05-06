@@ -236,6 +236,7 @@ def train_gmm_network_with_early_stopping(
         
     Returns:
         tuple: (nets, best_metric) where:
+        
             - nets: List of trained GMM networks
             - best_metric: Best validation metric achieved
     """

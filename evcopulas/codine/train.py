@@ -451,7 +451,7 @@ def main(
         Train with custom seeds and early stopping:
         
         ```python
-        python train.p --random-seeds 1 --random-seeds 5 --random-seeds 10 --use-early-stopping --patience 200
+        python train.py --random-seeds 1 --random-seeds 5 --random-seeds 10 --use-early-stopping --patience 200
         ```
     """
     

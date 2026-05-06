@@ -15,7 +15,7 @@ This repository provides implementations of several copula-based methods for EV 
 
 - 🔬 **Multiple Modeling Approaches**: Classical copulas, neural copulas, and GMM networks
 - 📊 **Comprehensive Evaluation**: Wasserstein distance, Kendall's tau, tail dependence, information criteria
-- 🚗 **EV-Specific Analysis**: Daily load curve modeling and practical charging applications
+- 🚗 **EV-Specific Analysis**: Daily load curve modeling
 - 🎯 **Robust Training**: Multi-seed evaluation, early stopping, and validation-based model selection
 - 📈 **Visualization Tools**: Marginal density plots, load curve comparisons, and statistical visualizations
 
@@ -57,7 +57,7 @@ python -m evcopulas.codine.train --dataset trondheim --divergence GAN
 python -m evcopulas.gmmnetwork.train --dataset trondheim --use-early-stopping
 
 # 5. Evaluate all models
-python -m evcopulas.evaluate --datasets trondheim --models gaussian codine gmmnetwork
+python -m evcopulas.evaluate --datasets trondheim --models gaussian --models codine --models gmmnetwork
 ```
 
 ## Research Impact

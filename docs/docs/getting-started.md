@@ -47,7 +47,7 @@ The framework supports three EV charging datasets:
 
 ### Data Structure
 
-Place your raw data files in the `data/raw/` directory:
+Place your raw downloaded data files in the `data/raw/` directory:
 
 ```
 data/
@@ -67,22 +67,7 @@ Each dataset should contain EV charging session data with columns for:
 - Duration or end time
 - Energy consumption
 
-If using your own proprietary dataset, it's necessary to change the underlying preprocessing function in the `dataset.py`.
-
-## Data Preprocessing
-
-Before training any model, download the dataset:
-
-1. Download the dataset from the links in [Supported Datasets](#supported-datasets) above
-2. Place the CSV file in `data/raw/` (e.g. `data/raw/trondheim.csv`)
-
-```bash
-python -m evcopulas.dataset --dataset trondheim
-# or
-python -m evcopulas.dataset --dataset dundee
-```
-
-This produces a processed file in `data/processed/` with three standardized columns: `start_hour_shifted`, `duration`, and `energy`.
+If using your own proprietary dataset, it's necessary to change the underlying preprocessing function `preprocess_proprietary_dataset()` in the `dataset.py`.
 
 ## First Steps
 
@@ -94,7 +79,7 @@ Start with a simple Gaussian copula:
 python -m evcopulas.copulas.train \
     --dataset trondheim \
     --copulas gaussian \
-    --random-seeds 1 2 3
+    --random-seeds 1 --random-seeds 2  --random-seeds 3
 ```
 
 ### 2. Train CODINE Neural Copula
@@ -122,7 +107,7 @@ python -m evcopulas.gmmnetwork.train \
 ```bash
 python -m evcopulas.evaluate \
     --datasets trondheim \
-    --models gaussian codine gmmnetwork
+    --models gaussian --models codine --models gmmnetwork
 ```
 
 ## Understanding the Output
@@ -157,7 +142,7 @@ Set random seeds for reproducible results:
 ```bash
 python -m evcopulas.copulas.train \
     --dataset trondheim \
-    --random-seeds 42 123 456
+    --random-seeds 42 --random-seeds 123 --random-seeds 456
 ```
 
 ### GPU Usage
